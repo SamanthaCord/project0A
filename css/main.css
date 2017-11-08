@@ -8,6 +8,9 @@ body {
   font-family: 'Barlow', sans-serif;
 }
 
+
+/*///////////////////////////////GAME TITLES///////////////////////////*/
+
 .nextLevel {
   font-size: 200px;
   position: absolute;
@@ -59,9 +62,57 @@ body {
   display: none;
 }
 
+/*//////////////////////////TIMER//////////////////////////////////*/
+
+.timer {
+  display:inline-block;
+  margin-left: 144px;
+  vertical-align: top;
+  margin-top: 158px;
+}
+
+.counter {
+  font-size: 200px;
+  color: red;
+  border: 5px solid red;
+  border-radius: 200px;
+  padding: 40px;
+}
+
+#one {
+  display: none;
+}
+
+#two {
+  display: none;
+}
+
+#three {
+  display: none;
+}
+
+#four {
+  display: none;
+}
+
+#five {
+  display: none;
+}
+
+.timerheading {
+  font-size: 30px;
+  color: red;
+  display: inline-block;
+  margin-left: 12px;
+  display: none;
+}
+
+/*///////////////////////GAME BOARD//////////////////////////////*/
+
 .container {
   width: 600px;
   height: 600px;
+  display:inline-block;
   padding: 50px;
   border: 5px solid white;
   background-image: url("../images/waves-3.jpg");
