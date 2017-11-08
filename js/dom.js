@@ -14,6 +14,25 @@ if (localStorage.nextLevel > 5) {
 win();
 
 
+const timerCountdown = function () {
+    (if ti)
+    $("#five").show();
+    $(".timerheading").css("display", "none");
+    setTimeout(function() { $("#five").hide(); }, 300);
+    $("#four").delay(800).show(0);
+    setTimeout(function() { $("#four").hide(); }, 1100);
+    $("#three").delay(1700).show(0);
+    setTimeout(function() { $("#three").hide(); }, 2000);
+    $("#two").delay(2500).show(0);
+    setTimeout(function() { $("#two").hide(); }, 2800);
+    $("#one").delay(3300).show(0);
+    setTimeout(function() { $("#one").hide(); }, 3800);
+    $("#zero").delay(4200).show(0);
+    $(".sharkclock").delay(4200).show(0);
+  }
+
+
+
 //check document is ready//
 $(document).ready(function () {
   console.log("document ready");
@@ -23,6 +42,7 @@ $('.sosButton').on('click', function (){
   console.log("sos button clicked");
   sosButtonClicked = true;
   pattern(gameBoard);
+  timerCountdown();
   //console.log(gamePattern);
   for (i = 0; i < gamePattern.length; i++) {
     let highlightColor = document.getElementById(gamePattern[i]);
