@@ -5,13 +5,67 @@ body {
   padding: 0;
   background-color: #e3e3e3;
   max-width: 1400px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.nextLevel {
+  font-size: 200px;
+  position: absolute;
+  margin-top: 214px;
+  color: #152df7;
+  z-index: 2;
+  -webkit-animation: "newlevelflash" .4s 8; /* Safari 4+ */
+  -moz-animation: "newlevelflash" .4s 8; /* Fx 5+ */
+  -o-animation: "newlevelflash" .4s 8; /* Opera 12+ */
+  animation: "newlevelflash" .4s 8;
+  display: none;
+}
+
+.wrongMove {
+  font-size: 200px;
+  position: absolute;
+  margin-top: 214px;
+  color: #f74915;
+  z-index: 2;
+  -webkit-animation: "wrongmoveflash" .4s 8; /* Safari 4+ */
+  -moz-animation: "wrongmoveflash" .4s 8; /* Fx 5+ */
+  -o-animation: "wrongmoveflash" .4s 8; /* Opera 12+ */
+  animation: "wrongmoveflash" .4s 8;
+  display: none;
+}
+
+.gameOver {
+  font-size: 200px;
+  position: absolute;
+  margin-top: 214px;
+  color: #f7151f;
+  z-index: 2;
+  -webkit-animation: "gameoverflash" .4s 8; /* Safari 4+ */
+  -moz-animation: "gameoverflash" .4s 8; /* Fx 5+ */
+  -o-animation: "gameoverflash" .4s 8; /* Opera 12+ */
+  animation: "gameoverflash" .4s 8;
+  display: none;
+}
+
+.gameWon {
+  font-size: 121px;
+  text-align: center;
+  position: absolute;
+  margin-top: 214px;
+  border: 5px solid white;
+  background-color: #152df7;
+  color: white;
+  z-index: 2;
+  display: none;
 }
 
 .container {
   width: 600px;
   height: 600px;
   padding: 50px;
-  border: 1px solid black;
+  border: 5px solid white;
+  background-image: url("../images/waves-3.jpg");
+  background-repeat: no-repeat;
 }
 
 .sosButton {
@@ -40,29 +94,27 @@ body {
   border-radius: 50px;
 }
 
+/*////////////////////////OPENING PATTERN FLASHING ANIMATION/////////////////////////*/
+
 @-webkit-keyframes flash {
   0%   { background-color: red; }
   100% { background-color: #21E412; }
   75% { background-color: yellow; }
-  /*50% { background-color: #21E412; }*/
 }
 @-moz-keyframes flash {
   0%   { background-color: red; }
   100% { background-color: #21E412; }
   75% { background-color: yellow; }
-  /*50% { background-color: #21E412; }*/
 }
 @-o-keyframes flash {
   0%   { background-color: red; }
   100% { background-color: #21E412; }
   75% { background-color: yellow; }
-  /*50% { background-color: #21E412; }*/
 }
 @keyframes flash {
   0%   { background-color: red; }
   100% { background-color: #21E412; }
   75% { background-color: yellow; }
-  /*50% { background-color: #21E412; }*/
 }
 
 .circleFlash {
@@ -70,4 +122,61 @@ body {
   -moz-animation: "flash" 0.5s 2; /* Fx 5+ */
   -o-animation: "flash" 0.5s 2; /* Opera 12+ */
   animation: "flash" 0.5s 2; /* IE 10+, Fx 29+ */
+}
+
+/*////////////////////////NEXT LEVEL HEADING///////////////////////////*/
+
+@-webkit-keyframes newlevelflash {
+  0%   { color: #152df7; }
+  100% { color: #15bff7; }
+}
+@-moz-keyframes newlevelflash {
+  0%   { color: #152df7; }
+  100% { color: #15bff7; }
+}
+@-o-keyframes newlevelflash {
+  0%   { color: #152df7; }
+  100% { color: #15bff7; }
+}
+@keyframes newlevelflash {
+  0%   { color: #152df7; }
+  100% { color: #15bff7; }
+}
+
+/*////////////////////////WRONG MOVE HEADING///////////////////////////*/
+
+@-webkit-keyframes wrongmoveflash {
+  0%   { color: #f74915; }
+  100% { color: #f7db16; }
+}
+@-moz-keyframes wrongmoveflash {
+  0%   { color: #f74915; }
+  100% { color: #f7db16; }
+}
+@-o-keyframes wrongmoveflash {
+  0%   { color: #f74915; }
+  100% { color: #f7db16; }
+}
+@keyframes wrongmoveflash {
+  0%   { color: #f74915; }
+  100% { color: #f7db16; }
+}
+
+/*////////////////////////GAME OVER HEADING///////////////////////////*/
+
+@-webkit-keyframes gameoverflash {
+  0%   { color: #f7151f; }
+  100% { color: #F7159E; }
+}
+@-moz-keyframes gameoverflash {
+  0%   { color: #f7151f; }
+  100% { color: #F7159E; }
+}
+@-o-keyframes gameoverflash {
+  0%   { color: #f7151f; }
+  100% { color: #F7159E; }
+}
+@keyframes gameoverflash {
+  0%   { color: #f7151f; }
+  100% { color: #F7159E; }
 }
