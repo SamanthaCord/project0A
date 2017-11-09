@@ -66,12 +66,16 @@ body {
 
 /*//////////////////////////TIMER//////////////////////////////////*/
 
+/*timer container*/
+
 .timer {
   display:inline-block;
   margin-left: 144px;
   vertical-align: top;
   margin-top: 158px;
 }
+
+/*styling for individual numbers in the countdown */
 
 .counter {
   font-size: 200px;
@@ -81,6 +85,8 @@ body {
   padding: 40px;
 }
 
+/*shark o'clock heading that sits under number zero when countdown times out*/
+
 .sharkclock {
   font-size: 40px;
   font-weight: 700;
@@ -88,6 +94,8 @@ body {
   text-align: center;
   display: none;
 }
+
+/*hiding each number in the countdown until it is called in the jQuery file*/
 
 #zero {
   display: none;
@@ -113,15 +121,17 @@ body {
   display: none;
 }
 
-.timerheading {
+/*.timerheading {
   font-size: 30px;
   color: red;
   display: inline-block;
   margin-left: 12px;
   display: none;
-}
+}*/
 
 /*///////////////////////GAME BOARD//////////////////////////////*/
+
+/*game board container*/
 
 .container {
   width: 600px;
@@ -133,6 +143,8 @@ body {
   background-repeat: no-repeat;
 }
 
+/*sos button styling*/
+
 .sosButton {
   width: 100px;
   height: 50px;
@@ -143,12 +155,16 @@ body {
   vertical-align: top;
 }
 
+/*text inside sos button */
+
 .sosButton p {
   text-align: center;
   color: white;
   font-size: 30px;
   margin-top: 8px;
 }
+
+/*styling of red dots*/
 
 .buoy {
   width: 51px;
@@ -160,6 +176,7 @@ body {
 }
 
 /*////////////////////////OPENING PATTERN FLASHING ANIMATION/////////////////////////*/
+/*lights up the dots that match the pattern*/
 
 @-webkit-keyframes flash {
   0%   { background-color: red; }
@@ -189,7 +206,7 @@ body {
   animation: "flash" 0.5s 2; /* IE 10+, Fx 29+ */
 }
 
-/*////////////////////////NEXT LEVEL HEADING///////////////////////////*/
+/*////////////////////////NEXT LEVEL HEADING ANIMATION///////////////////////////*/
 
 @-webkit-keyframes newlevelflash {
   0%   { color: #152df7; }
@@ -208,7 +225,7 @@ body {
   100% { color: #15bff7; }
 }
 
-/*////////////////////////WRONG MOVE HEADING///////////////////////////*/
+/*////////////////////////WRONG MOVE HEADING ANIMATION///////////////////////////*/
 
 @-webkit-keyframes wrongmoveflash {
   0%   { color: #f74915; }
@@ -227,7 +244,7 @@ body {
   100% { color: #f7db16; }
 }
 
-/*////////////////////////GAME OVER HEADING///////////////////////////*/
+/*////////////////////////GAME OVER HEADING ANIMATION///////////////////////////*/
 
 @-webkit-keyframes gameoverflash {
   0%   { color: #f7151f; }

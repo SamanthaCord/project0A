@@ -15,13 +15,18 @@
 
 <body>
 
+  <!-- Game titles  -->
+
 <h1 class="nextLevel">NEXT LEVEL!</h1>
 <h1 class="wrongMove">WRONG MOVE!</h1>
 <h1 class="gameOver">GAME OVER!</h1>
 <h1 class="gameWon">YOU WON! <br> LEVELS COMPLETE.</h1>
 
+<!-- container holding each red dot in the game board -->
 
 <div class="container">
+
+  <!-- the red squares that make up the gameboard, each is given a number index that matches the gameboard array in the javascript file so they can be compared and matched  -->
 
   <div class="buoy" id = '1'></div>
   <div class="buoy" id = '2'></div>
@@ -40,9 +45,13 @@
   <div class="buoy" id = '15'></div>
   <div class="buoy" id = '16'></div>
 
+  <!-- SOS button -->
+
   <div class=sosButton><p>SOS</p></div>
 
 </div>
+
+<!-- container 'timer' is holding the countdown numbers -->
 
 <div class="timer">
   <div class="counter" id="five">5</div>
