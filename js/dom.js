@@ -2,6 +2,7 @@
 
 let sosButtonClicked = false;
 let winner = false;
+let gameRunning = true;
 let buoyButtonClicks = 0;
 
 const win = function () {
@@ -15,7 +16,6 @@ win();
 
 
 const timerCountdown = function () {
-    (if ti)
     $("#five").show();
     $(".timerheading").css("display", "none");
     setTimeout(function() { $("#five").hide(); }, 300);
@@ -29,8 +29,11 @@ const timerCountdown = function () {
     setTimeout(function() { $("#one").hide(); }, 3800);
     $("#zero").delay(4200).show(0);
     $(".sharkclock").delay(4200).show(0);
+    if (winner === false) {
+    $(".gameOver").delay(4800).show(0);
+    localStorage.clear();
+    }
   }
-
 
 
 //check document is ready//
@@ -41,6 +44,7 @@ $('.sosButton').on('click', function (){
   if (sosButtonClicked === false) {
   console.log("sos button clicked");
   sosButtonClicked = true;
+  gameRunning = true;
   pattern(gameBoard);
   timerCountdown();
   //console.log(gamePattern);
@@ -76,12 +80,6 @@ $(".buoy").click(function () { $(this)
     $(".wrongMove").show();
     setTimeout(function() { $(".wrongMove").hide(); }, 800);
   }
-}
-else {
-  // console.log('gameover');
-  //time ran out
-  $(".gameOver").css("display", "inline-block");
-  winner = true;
 }
 })
 

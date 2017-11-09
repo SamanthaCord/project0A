@@ -42,6 +42,8 @@ body {
   position: absolute;
   margin-top: 214px;
   color: #f7151f;
+  background-color: white;
+  border: 5px red solid;
   z-index: 2;
   -webkit-animation: "gameoverflash" .4s 8; /* Safari 4+ */
   -moz-animation: "gameoverflash" .4s 8; /* Fx 5+ */
