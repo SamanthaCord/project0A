@@ -4,6 +4,7 @@ let sosButtonClicked = false;
 let winner = false;
 let gameRunning = true;
 let buoyButtonClicks = 0;
+let gameOver = false
 
 const win = function () {
 if (localStorage.nextLevel > 5) {
@@ -13,7 +14,6 @@ if (localStorage.nextLevel > 5) {
 }
 
 win();
-
 
 const timerCountdown = function () {
     $("#five").show();
@@ -29,10 +29,14 @@ const timerCountdown = function () {
     setTimeout(function() { $("#one").hide(); }, 3800);
     $("#zero").delay(4200).show(0);
     $(".sharkclock").delay(4200).show(0);
-    if (winner === false) {
-    $(".gameOver").delay(4800).show(0);
-    localStorage.clear();
-    }
+    setTimeout(function() {
+      if (!winner) {
+        $(".gameOver").show(0);
+        gameOver = true
+        localStorage.clear();
+      }
+    }, 4800)
+
   }
 
 
@@ -62,10 +66,11 @@ $(".buoy").click(function () { $(this)
   let value = ($(this).attr('id'));
   //console.log(value);
   if (value === gamePattern[0] || value === gamePattern[1] || value === gamePattern[2] || value === gamePattern[3]) {
-    //console.log('continue');
     $(this).css("background-color", "#21E412");
     buoyButtonClicks += 1;
-    if (buoyButtonClicks === 4) {
+    console.log('continue', buoyButtonClicks, gameOver);
+
+    if (buoyButtonClicks === 4 && !gameOver) {
       //trigger next level text!
       //console.log('Next level!');
       $(".nextLevel").show();
@@ -75,7 +80,7 @@ $(".buoy").click(function () { $(this)
   },850);
   }
 }
-  else if (buoyButtonClicks < 4 && sosButtonClicked) {
+  else if (buoyButtonClicks < 4 && sosButtonClicked && !gameOver) {
     //console.log('wrong!');
     $(".wrongMove").show();
     setTimeout(function() { $(".wrongMove").hide(); }, 800);
